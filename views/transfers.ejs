@@ -1,0 +1,53 @@
+<div class="bg orders-all">
+<div class="profile-top">
+    TRANSFER MANAGEMENT
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand">SUPPLYLINK </a>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="/home"><i class="icon-home"></i>Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <button type="button" class="btn btn-outline-danger"><i class="icon-logout  "></i>Logout</button>
+  </div>
+</nav>
+<div class="card card-body order-card">
+  <span style="color:#ffab00; font-size: 24px; text-align: center;"><b>RECIEVE BATCH</b></span>
+  <div class="tile-verify" style="margin:10px 0px 0px 70px;">
+      <img src="images/receive-batch.svg" height="80" width="210">
+  </div>
+  <form onSubmit="App.receiveBatch(); return false;">
+      <p>Batch id:</p><input class="form-control" id="batch_id" type="text" />
+      <button style="margin-left: 100px; margin-top: 20px;"type="submit" class="btn btn-primary btn-sml custom-btn">RECEIVE BATCH</button>
+  </form>
+</div>
+<div class="card card-body order-card">
+  <span style="color:#ffab00; font-size: 24px; text-align: center;"><b>TRANSFER PART</b></span>
+  <div class="tile-verify" style="margin:10px 0px 0px 70px;">
+      <img src="images/part.svg" height="80" width="210">
+  </div>
+  <form onSubmit="App.transferPart(); return false;">
+      <p>New owner address:</p><input class="form-control" id="new_owner" type="text" />
+      <p>Part ID:</p><input class="form-control" id="part_id" type="text" />
+        <button style="margin-left: 100px; margin-top: 20px;"type="submit" class="btn btn-primary btn-sml custom-btn">TRANSFER PART</button>
+  </form>
+</div>
+<div class="card card-body order-card">
+  <span style="color:#ffab00; font-size: 24px; text-align: center;"><b>TRANSFER VEHICLE</b></span>
+  <div class="tile-verify" style="margin:10px 0px 0px 70px;">
+      <img src="images/vehicle.svg" height="80" width="210">
+  </div>
+  <form onSubmit="">
+    <p>New owner address:</p><input class="form-control" id="new_owner" type="text" />
+    <p>Vehicle ID:</p><input class="form-control" id="id" type="text" />
+    <button style="margin-left: 100px; margin-top: 20px;"type="submit" class="btn btn-primary btn-sml custom-btn">TRANSFER VEHICLE</button>
+  </form>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="truffle-contract.js"></script>
+<script src="controllers/transfer-controller.js"></script>
